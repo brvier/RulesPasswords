@@ -1,0 +1,74 @@
+.left {
+	text-align: left;
+}
+
+.list-item-container {
+  line-height: 1;
+  padding: 15px 0px 15px 15px;
+}
+
+ons-list-item > ons-icon {
+  margin: 0 4px 0 0;
+  opacity: 0.8;
+}
+
+.list-item-action {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-size: 20px;
+  opacity: 0.3;
+}
+
+.list-item-action > ons-icon {
+  margin-top: 14px;
+}
+
+.list-item-note {
+  position: absolute;
+  right: 36px;
+  top: 0px;
+  font-size: 14px;
+}
+
+.list-item-note > .notification {
+  margin-top: 12px;
+}
+
+.lucent {
+  opacity: 0.4;
+}
+
+.range-wrapper .range {
+  margin-top: 7px;
+  width: 100%;
+}
+
+.fullwidth {
+    width: 100%;
+}
+
+.card {
+  background-color: #333;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  height: 150px;
+}
+
+
+.card-name {
+  font-weight: 600;
+  padding: 20px 0 8px 0;
+  text-align: center;
+}
+
+.card-desc {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.9;
+  text-align: center;
+  line-height: 1.4;
+}
+
+
