@@ -1,13 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="net.khertan.rulespasswords" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="net.khertan.rulespasswords" version="0.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
     <name>RulesPasswords</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A PasswordMaker like application : RulesPasswords generate a unique passwords from an URL and a master password, so, no need to remember this unique password.
     </description>
-    <author email="khertan@khertan.net" href="http://khertan.net">
-        Benoît HERVIER (Khertan)
-    </author>
+    <author email="khertan@khertan.net" href="http://khertan.net">Benoit HERVIER</author>
+    <publisher>Benoit HERVIER</publisher>
     <icon src="icon.png" />
     <content src="index.html" />
     <access origin="*" />
+    <rim:permissions>
+        <rim:permit>read_device_identifying_information</rim:permit>
+    </rim:permissions>
 </widget>

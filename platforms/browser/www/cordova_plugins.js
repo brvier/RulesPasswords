@@ -13,13 +13,26 @@ module.exports = [
         "clobbers": [
             "community.clipboard"
         ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device/www/device.js",
+        "id": "org.apache.cordova.device.device",
+        "clobbers": [
+            "device"
+        ]
+    },
+    {
+        "file": "plugins/org.apache.cordova.device/src/browser/DeviceProxy.js",
+        "id": "org.apache.cordova.device.DeviceProxy",
+        "runs": true
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "com.verso.cordova.clipboard": "0.1.0",
-    "com.blackberry.community.clipboard": "1.0.0"
+    "com.blackberry.community.clipboard": "1.0.0",
+    "org.apache.cordova.device": "0.2.13"
 }
 // BOTTOM OF METADATA
 });

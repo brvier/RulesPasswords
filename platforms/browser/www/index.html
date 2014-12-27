@@ -60,6 +60,19 @@
                 }
             catch(err){
                 console.log('getPrefs Error : ' + option + ':' + err);
+                if (option == 'hashalgorithm') {
+                    return 'md5'
+                } else if (option == 'leetwhere') {
+                    return 'off'
+                } else if (option == 'leetlevel') {
+                    return '5'
+                } else if (option == 'plength') {
+                    return '10'
+                } else if (option == 'characters') {
+                    return 'base93'
+                } else if (option == 'preURL') {
+                    return ''
+                }
             }
         }
 
@@ -69,8 +82,12 @@
         }
         
         $scope.copy = function() {
-            //cordova.plugins.clipboard.copy($scope.data.generatedPassword);
-            community.clipboard.setText($scope.data.generatedPassword);
+            if (device.platform == "blackberry10") {
+                community.clipboard.setText($scope.data.generatedPassword);
+                }
+            else {
+                cordova.plugins.clipboard.copy($scope.data.generatedPassword);
+            }
         }
         
         $scope.generate = function() {
@@ -133,8 +150,8 @@
         width: 100%;
         margin: 0 auto;
         outline: none;
-        padding-top: 24px;
-        padding-bottom: 24px;
+        padding-top: 18px;
+        padding-bottom: 18px;
     }
 
     .generate-button {
@@ -155,10 +172,7 @@
     .profile-image {
         width: 50px;
         height: 50px;
-        border-radius: 100%;
-        -webkit-border-radius: 100%;
-        background-color: #ccc;
-    }
+        }
 
     .profile-name {
         font-size: 18px;
@@ -238,10 +252,8 @@
                        <br>
                 <input type="password" class="text-input fullwidth" placeholder="MasterPassword" value="" id="passwdMaster"
                        ng-model="data.passwdMaster" ng-change="" value="">
-                <br>
                 <p class="result" id="passwdGenerated" ng-bind='data.generatedPassword'></p>
-                <ons-button modifier="large" class="generate-button" ng-click="generate()" >Generate</ons-button>
-                <br>
+                <ons-button modifier="large" class="generate-button" ng-click="generate()" >Generate</ons-button><br>
                 <ons-button modifier="large" class="copy-button" ng-click="copy()" >Copy</ons-button>
             </div>
 
@@ -1236,15 +1248,13 @@
                         </ons-toolbar>
 
                         <ons-row class="profile-wrapper">
-                            <ons-col width="60px" class="profile-image-wrapper">
-                                <div class="profile-image">
-                                    <img src="img/icon.png">
-                                </div>
+                            <ons-col width="70px" class="profile-image-wrapper">
+                                    <img class="profile-image" src="img/icon.png">
                             </ons-col>
 
                             <ons-col>
                                 <div class="profile-name">RulesPasswords</div>
-                                <div class="profile-email">v0.0.2</div>
+                                <div class="profile-email">v0.0.4</div>
                             </ons-col>
 
                         </ons-row>

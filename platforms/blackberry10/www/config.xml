@@ -1,14 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="net.khertan.rulespasswords" version="0.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:rim="http://www.blackberry.com/ns/widgets">
+<widget id="net.khertan.rulespasswords" version="0.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:rim="http://www.blackberry.com/ns/widgets">
     <feature name="com.blackberry.community.clipboard" value="com.blackberry.community.clipboard" />
+    <feature name="Device" value="Device" />
     <name>RulesPasswords</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+        A PasswordMaker like application : RulesPasswords generate a unique passwords from an URL and a master password, so, no need to remember this unique password.
     </description>
-    <author email="khertan@khertan.net" href="http://khertan.net">
-        Benoît HERVIER (Khertan)
-    </author>
+    <author email="khertan@khertan.net" href="http://khertan.net">Benoit HERVIER</author>
+    <publisher>Benoit HERVIER</publisher>
     <icon src="icon.png" />
     <content src="index.html" />
     <access origin="*" />
+    <rim:permissions>
+        <rim:permit>read_device_identifying_information</rim:permit>
+    </rim:permissions>
 </widget>

@@ -60,6 +60,19 @@
                 }
             catch(err){
                 console.log('getPrefs Error : ' + option + ':' + err);
+                if (option == 'hashalgorithm') {
+                    return 'md5'
+                } else if (option == 'leetwhere') {
+                    return 'off'
+                } else if (option == 'leetlevel') {
+                    return '5'
+                } else if (option == 'plength') {
+                    return '10'
+                } else if (option == 'characters') {
+                    return 'base93'
+                } else if (option == 'preURL') {
+                    return ''
+                }
             }
         }
 
@@ -69,7 +82,7 @@
         }
         
         $scope.copy = function() {
-            if (device.platform == "BlackBerry 10") {
+            if (device.platform == "blackberry10") {
                 community.clipboard.setText($scope.data.generatedPassword);
                 }
             else {
@@ -1241,7 +1254,7 @@
 
                             <ons-col>
                                 <div class="profile-name">RulesPasswords</div>
-                                <div class="profile-email">v0.0.2</div>
+                                <div class="profile-email">v0.0.4</div>
                             </ons-col>
 
                         </ons-row>

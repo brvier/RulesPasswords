@@ -11,6 +11,16 @@
                         {
                             "xml": "<feature name=\"com.blackberry.community.clipboard\" value=\"com.blackberry.community.clipboard\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\" value=\"Device\" />",
+                            "count": 1
+                        }
+                    ],
+                    "/widget/rim:permissions": [
+                        {
+                            "xml": "<rim:permit>read_device_identifying_information</rim:permit>",
+                            "count": 1
                         }
                     ]
                 }
@@ -22,6 +32,9 @@
             "PACKAGE_NAME": "net.khertan.rulespasswords"
         },
         "com.blackberry.community.clipboard": {
+            "PACKAGE_NAME": "net.khertan.rulespasswords"
+        },
+        "org.apache.cordova.device": {
             "PACKAGE_NAME": "net.khertan.rulespasswords"
         }
     },
