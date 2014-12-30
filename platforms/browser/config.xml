@@ -12,7 +12,4 @@
     <icon src="icon.png" />
     <content src="index.html" />
     <access origin="*" />
-    <rim:permissions>
-        <rim:permit>read_device_identifying_information</rim:permit>
-    </rim:permissions>
 </widget>

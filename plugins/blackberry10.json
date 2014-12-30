@@ -28,10 +28,10 @@
         }
     },
     "installed_plugins": {
-        "com.verso.cordova.clipboard": {
+        "com.blackberry.community.clipboard": {
             "PACKAGE_NAME": "net.khertan.rulespasswords"
         },
-        "com.blackberry.community.clipboard": {
+        "com.verso.cordova.clipboard": {
             "PACKAGE_NAME": "net.khertan.rulespasswords"
         },
         "org.apache.cordova.device": {
