@@ -26,7 +26,7 @@
 
       $scope.doAlert = function(msg) {
         setTimeout(function() {
-          alert(msg);
+            ons.notification.alert({'message':msg, 'title':'RulesPasswords'});
         }, 100);
       };
 

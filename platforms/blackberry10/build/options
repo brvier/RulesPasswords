@@ -1,7 +1,4 @@
 -package
--debugToken
-/home/khertan/.cordova/blackberry10debugtoken.bar
--devMode
 /home/khertan/Projects/RulesPasswords/platforms/blackberry10/build/device/bb10app.bar
 -barVersion
 1.5
@@ -22,7 +19,6 @@ bar-descriptor.xml
 /home/khertan/Projects/RulesPasswords/platforms/blackberry10/build/src/chrome/lib/utils.js
 /home/khertan/Projects/RulesPasswords/platforms/blackberry10/build/src/img/icon.png
 /home/khertan/Projects/RulesPasswords/platforms/blackberry10/build/src/js/app.js
-/home/khertan/Projects/RulesPasswords/platforms/blackberry10/build/src/js/passwordmaker.js
 /home/khertan/Projects/RulesPasswords/platforms/blackberry10/build/src/lib/onsen/css/onsen-css-components-blue-basic-theme.css
 /home/khertan/Projects/RulesPasswords/platforms/blackberry10/build/src/lib/onsen/css/onsen-css-components-blue-theme.css
 /home/khertan/Projects/RulesPasswords/platforms/blackberry10/build/src/lib/onsen/css/onsen-css-components-dark-theme.css

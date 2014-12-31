@@ -32,5 +32,8 @@ switch (process.platform) {
     //TODO: Get --user-data-dir to work for windows
     spawn('C:/Program Files (x86)/Google/Chrome/Application/chrome.exe', ['--user-data-dir="C:/Chromedevsession"', '--disable-web-security', project]);
     break;
+  case 'linux':
+    spawn('firefox', [project,]);
+    break;
 }
 
