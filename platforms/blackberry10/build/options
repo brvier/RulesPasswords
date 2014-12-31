@@ -1,4 +1,7 @@
 -package
+-debugToken
+/home/khertan/.cordova/blackberry10debugtoken.bar
+-devMode
 /home/khertan/Projects/RulesPasswords/platforms/blackberry10/build/device/bb10app.bar
 -barVersion
 1.5

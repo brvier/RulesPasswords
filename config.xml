@@ -6,12 +6,12 @@
     </description>
     <author email="khertan@khertan.net" href="http://khertan.net">Benoit HERVIER</author>
     <publisher>Benoit HERVIER</publisher>
-    
+
     <icon src="icon.png" />
-    
+
     <content src="index.html" />
     <access origin="*" />
-    
+
     <platform name="blackberry10">
         <rim:permissions>
             <rim:permit>read_device_identifying_information</rim:permit>
