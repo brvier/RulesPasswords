@@ -12,9 +12,4 @@
     <content src="index.html" />
     <access origin="*" />
 
-    <platform name="blackberry10">
-        <rim:permissions>
-            <rim:permit>read_device_identifying_information</rim:permit>
-        </rim:permissions>
-    </platform>
 </widget>
