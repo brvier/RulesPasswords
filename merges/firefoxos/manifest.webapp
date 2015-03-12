@@ -1,0 +1,18 @@
+{
+    "launch_path": "/index.html",
+    "installs_allowed_from": [
+        "*"
+    ],
+    "version": "0.0.7",
+    "name": "RulesPasswords",
+    "description": "A PasswordMaker like application : RulesPasswords generate a unique passwords from an URL and a master password, so, no need to remember this unique password.",
+    "developer": {
+        "name": "Benoit HERVIER",
+        "url": "http://khertan.net"
+    },
+    "icons": {
+        "60": "/icons/icon-60.png",
+        "80": "/icons/icon-80.png",
+        "128": "/icons/icon-128.png"
+    }
+}
