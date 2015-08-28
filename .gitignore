@@ -27,3 +27,5 @@ Thumbs.db
 *.un~
 
 platforms/*
+plugins/*
+*.keystore

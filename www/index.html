@@ -7,6 +7,11 @@
 
   <title>RulesPasswords</title>
 
+  <link rel="icon" type="image/png" sizes="480x480" href="img/icon-480.png" />
+  <link rel="icon" type="image/png" sizes="128x128" href="img/icon-128.png" />
+  <link rel="icon" type="image/png" sizes="60x60" href="img/icon-60.png" />
+  <link rel="icon" type="image/png" sizes="80x80" href="img/icon-80.png" />
+    
   <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
   <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
   <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-blue-basic-theme.css">
@@ -88,12 +93,8 @@
       };
 
       $scope.copy = function() {
-        if (device.platform == "blackberry10") {
-          community.clipboard.setText($scope.data.generatedPassword);
-        } else {
-          cordova.plugins.clipboard.copy($scope.data.generatedPassword);
-        }
-        $scope.doAlert('Password copied to clipboard.');
+        cordova.plugins.clipboard.copy($scope.data.generatedPassword);
+        $scope.doAlert('Password copied to clipboard');
       };
 
       $scope.generate = function() {
@@ -449,7 +450,8 @@
 
         <ons-col>
           <div class="profile-name">RulesPasswords</div>
-          <div class="profile-email">v0.0.7</div>
+          <div class="profile-email">v0.1.0 by Benoît HERVIER</div>
+          <div class="profile-email">Licenced under GPLv3</div>
         </ons-col>
 
       </ons-row>
@@ -506,13 +508,13 @@
 
       </ons-list>
 
-      <div class="settings-header">Others</div>
+      <!--<div class="settings-header">Others</div>
 
       <ons-list modifier="inset" class="settings-list">
         <ons-list-item modifier="chevron" ng-click="ons.navigator.pushPage('licences.html')">
           Licences
         </ons-list-item>
-      </ons-list>
+        </ons-list>-->
 
       <br>
 
