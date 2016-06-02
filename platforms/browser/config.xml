@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="net.khertan.rulespasswords" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="net.khertan.rulespasswords" version="0.3.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="Device">
         <param name="browser-package" value="Device" />
     </feature>
@@ -9,7 +9,11 @@
     </description>
     <author email="khertan@khertan.net" href="http://khertan.net">Benoit HERVIER</author>
     <publisher>Benoit HERVIER</publisher>
-    <icon src="icon.png" />
+    <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
     <content src="index.html" />
     <access origin="*" />
+    <preference name="xwalkVersion" value="18+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
 </widget>

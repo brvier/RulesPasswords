@@ -23,6 +23,12 @@
         },
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "net.khertan.rulespasswords"
+        },
+        "com.napolitano.cordova.plugin.intent": {
+            "PACKAGE_NAME": "net.khertan.rulespasswords"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "net.khertan.rulespasswords"
         }
     },
     "dependent_plugins": {}

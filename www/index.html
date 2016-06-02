@@ -12,13 +12,13 @@
   <link rel="icon" type="image/png" sizes="60x60" href="img/icon-60.png" />
   <link rel="icon" type="image/png" sizes="80x80" href="img/icon-80.png" />
     
-  <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
-  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
-  <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-blue-basic-theme.css">
+  <link rel="stylesheet" href="lib/OnsenUI/css/onsenui.css">
+  <link rel="stylesheet" href="lib/OnsenUI/css/onsen-css-components.css">
+  <link rel="stylesheet" href="lib/OnsenUI/css/onsen-css-components-blue-basic-theme.css">
   <link rel="stylesheet" href="styles/app.css" />
 
-  <script src="lib/onsen/js/angular/angular.min.js"></script>
-  <script src="lib/onsen/js/onsenui.min.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/OnsenUI/js/onsenui.min.js"></script>
   <script src="cordova.js"></script>
   <script src="js/app.js"></script>
 
@@ -28,6 +28,55 @@
     angular.module('app').controller('AppController', function($scope) {
 
       $scope.data = {};
+        
+
+      $scope.extractDomain = function(url) {
+            var domain;
+            //find & remove protocol (http, ftp, etc.) and get domain
+            if (url.indexOf("://") > -1) {
+                domain = url.split('/')[2];
+            }
+            else {
+                domain = url.split('/')[0];
+            }
+            
+            //find & remove port number
+            domain = domain.split(':')[0];
+
+            
+            //ignore subdomain
+            domain = domain.split('.').slice(-2).join('.');
+
+            return domain;
+      };
+
+
+      $scope.onIntent = function(intent) {
+            
+            $scope.$apply(function() {
+                if (intent.type = "text/plain") && (intent.action !== "android.intent.action.MAIN"){
+                    if (intent.clipItems.length > 0) {
+                        if (intent.clipItems[0].text) {
+                            $scope.data.preURL = $scope.extractDomain(intent.clipItems[0].text);
+                        }
+                    }
+                }
+            });
+      };
+
+      document.addEventListener('deviceReady', function(){
+              window.plugins.intent.getCordovaIntent(function (Intent) {
+                          console.log(Intent);
+                          $scope.onIntent(Intent);
+                              }, function () {
+                                          console.log('Error');
+                                              });
+              window.plugins.intent.setNewIntentHandler(function (Intent) {
+                            console.log('IntentHandler')
+                            console.log(Intent);
+                            $scope.onIntent(Intent);
+                              });
+      });
 
       $scope.doAlert = function(msg) {
         setTimeout(function() {
@@ -142,7 +191,8 @@
         <input type="text" class="text-input fullwidth" placeholder="Text" value="" id="preURL" ng-model="data.preURL" ng-change="">
         <br>
         <input type="password" class="text-input fullwidth" placeholder="MasterPassword" value="" id="passwdMaster" ng-model="data.passwdMaster" ng-change="" value="">
-        <p class="result" id="passwdGenerated" ng-bind='data.generatedPassword'></p>
+        <p class="result" id="#passwdGenerated" ng-bind='data.generatedPassword'></p>
+        <br> <input type="test" class="text-input fillwidth" value="{{data.generatedPassword}}">
         <ons-button modifier="large" class="generate-button" ng-click="generate()">Generate</ons-button>
         <br>
         <ons-button modifier="large" class="copy-button" ng-click="copy()">Copy</ons-button>
@@ -450,7 +500,7 @@
 
         <ons-col>
           <div class="profile-name">RulesPasswords</div>
-          <div class="profile-email">v0.1.0 by Benoît HERVIER</div>
+          <div class="profile-email">v0.2.0 by Benoît HERVIER</div>
           <div class="profile-email">Licenced under GPLv3</div>
         </ons-col>
 
